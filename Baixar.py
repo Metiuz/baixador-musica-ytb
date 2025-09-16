@@ -3,7 +3,7 @@ import os
 
 diretorio = './media/mp3'
 
-def Baixar(url):
+def Baixar(url: str):
     # Configurações do yt-dlp
     ffmpeg_path = os.path.join(os.path.dirname(__file__), "ffmpeg")
 
@@ -22,10 +22,14 @@ def Baixar(url):
     # Baixar e converter
     with YoutubeDL(options) as ydl:
         info_dict = ydl.extract_info(url, download=True)
-        audio_file = f"{diretorio}/{info_dict['title']}.mp3"
+        final_path = ydl.prepare_filename(info_dict)
+        final_path = os.path.splitext(final_path)[0] + ".mp3"
+        titulo = info_dict.get("title", "Sem título")
     
-    if os.path.exists(audio_file):
-        print(f"Áudio extraído e salvo como {audio_file}")
+    if os.path.exists(final_path):
+        print(f"Áudio extraído e salvo como {final_path}")
+        return titulo
     else:
         print("Erro: arquivo MP3 não encontrado!")
+        return None
 

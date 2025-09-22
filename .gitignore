@@ -14,7 +14,9 @@ dist/
 downloads/
 temp/
 media/mp3/*
+!media/mp3/.gitkeep
 ffmpeg/*
+!ffmpeg/.gitkeep
 eggs/
 .eggs/
 lib/

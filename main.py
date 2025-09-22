@@ -42,4 +42,6 @@ class App(customtkinter.CTk):
 
 
 app = App()
-app.mainloop()
+
+if __name__ == "__main__":
+    app.mainloop()

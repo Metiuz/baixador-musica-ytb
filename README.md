@@ -25,7 +25,7 @@ ffmpeg -version
 ```
 
 ## Linux
-* Arch Linux / Manjaro
+### Arch Linux / Manjaro
 ```ruby
 sudo pacman -S ffmpeg
 ```

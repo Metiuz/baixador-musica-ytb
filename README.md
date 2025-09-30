@@ -11,7 +11,7 @@
 ## Windows
 
 Baixe uma versão compilada do FFmpeg:
-[Link Text](https://www.gyan.dev/ffmpeg/builds/)
+ (https://www.gyan.dev/ffmpeg/builds/)
 
 Extraia o .zip.
 
@@ -65,7 +65,7 @@ brew install ffmpeg
 ### Binário manual
 
 Baixe um binário pronto:
-[Link Text](https://evermeet.cx/ffmpeg/)
+ (https://evermeet.cx/ffmpeg/)
 
 Mova para /usr/local/bin:
 

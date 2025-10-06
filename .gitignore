@@ -15,8 +15,6 @@ downloads/
 temp/
 media/mp3/*
 !media/mp3/.gitkeep
-ffmpeg/*
-!ffmpeg/.gitkeep
 eggs/
 .eggs/
 lib/
@@ -30,6 +28,9 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+ffmpeg.exe
+ffprobe.exe
+
 
 # PyInstaller
 #  Usually these files are written by a python script from a template

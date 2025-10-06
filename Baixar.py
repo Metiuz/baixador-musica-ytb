@@ -5,7 +5,7 @@ from getPathFile import get_ffmpeg_path
 
 diretorio = './media/mp3'
 
-def Baixar(url, diretorio=diretorio):
+def Baixar(url, progresso_hook, diretorio=diretorio) -> str:
     os.makedirs(diretorio, exist_ok=True)
 
     ffmpeg_path = get_ffmpeg_path()
@@ -14,6 +14,7 @@ def Baixar(url, diretorio=diretorio):
         'format': 'bestaudio/best',
         'outtmpl': f'{diretorio}/%(title)s.%(ext)s',
         'restrictfilenames': True,
+        'progress_hooks': [progresso_hook],
         'postprocessors': [{
             'key': 'FFmpegExtractAudio',
             'preferredcodec': 'mp3',
